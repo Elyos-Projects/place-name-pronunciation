@@ -1,0 +1,35 @@
+{
+  "id": "place-name-pronunciation-schema-001",
+  "title": "Define core data model (Place/Recording/Speaker/ConsentRecord/OriginNote/Provenance)",
+  "project": "place-name-pronunciation",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["language", "accessibility", "open-culture", "geography", "public-data"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "An open, consent-first corpus of place-name pronunciations (audio + IPA + respelling + sourced origin notes) needs a shared data model before any audio is ingested. Recordings are personal data, so consent and provenance must be first-class and mechanically checkable. Variation (local/official/Anglicised/historical) and contested/dual names must be representable without crowning a single 'correct' pronunciation. Indigenous/minority-language names follow CARE principles. Forvo and proprietary databases are out of scope. No partner steward is secured yet. See PLAN.md.",
+  "objective": "Define the six core record types (Place, Recording, Speaker, ConsentRecord, OriginNote, Provenance) as Ajv-valid JSON Schema with generated TypeScript types, making variantType, dualNames, mandatory consentRef, and provenance first-class, and keeping the Speaker record free of legal name/contact/precise location.",
+  "acceptanceCriteria": [
+    "All six record types defined with fields, datatypes, and cardinality; Ajv-valid JSON Schema + generated TS types.",
+    "variantType (local|official|anglicised|historical|other) and dualNames modelled as first-class fields.",
+    "Every Recording requires a resolvable provenance slot and a consentRef; CI can enforce both.",
+    "Speaker record stores no legal name, contact, or precise location (pseudonymous by design).",
+    "Place links to optional Wikidata QID and GeoNames ID; language tags use BCP-47.",
+    "Audio fields capture archival + derived refs, checksums, duration, and loudness."
+  ],
+  "resources": [
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "packages/schema/src/schemas.ts",
+    "https://www.wikidata.org/",
+    "https://www.geonames.org/",
+    "https://www.gida-global.org/care"
+  ],
+  "output": "A data-model specification (schema/README.md) plus Ajv-valid JSON Schema files for the six record types and generated TypeScript types, committed via PR.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC0-1.0"
+}
