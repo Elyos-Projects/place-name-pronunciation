@@ -1,0 +1,36 @@
+{
+  "id": "place-name-pronunciation-contribute-001",
+  "title": "Lightweight web contribution flow with built-in consent capture",
+  "project": "place-name-pronunciation",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["language", "accessibility", "open-culture", "public-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "The primary data-collection path in M0-M3 is curator-led (maintainer or reviewer collects and processes recordings). A lightweight web contribution flow would allow community members to submit recordings directly, but only under a partner consent-intake protocol — the project must not collect speaker PII without a partner organisation with an appropriate data-handling agreement. This is a backlog item, explicitly noted as 'Only with a partner consent-intake protocol' in TASKS.md. Any voice data collected must be ephemeral on the server side until it passes the CI gates; no recordings are stored without a complete ConsentRecord.",
+  "objective": "Implement a lightweight web contribution form that guides contributors through recording a place-name pronunciation and capturing a machine-readable ConsentRecord, operating only under a partner consent-intake protocol and without storing speaker PII in the public corpus.",
+  "acceptanceCriteria": [
+    "The contribution flow is only activated once a partner consent-intake protocol is in place and documented.",
+    "The ConsentRecord is captured as part of the contribution flow, covering: license grant, explicit voice-recording release, withdrawal terms, and CARE flag if applicable.",
+    "No speaker PII (legal name, contact, precise location) is stored in the public corpus; pseudonymous speaker ref only.",
+    "Submitted audio is held ephemerally until it passes the CI consent-completeness and license-allowlist gates; rejected submissions are discarded.",
+    "Guardian-consent path is implemented for potential minor/vulnerable-speaker submissions.",
+    "pnpm build && pnpm test && pnpm lint pass.",
+    "Privacy/consent reviewer signs off the consent-capture UX before launch.",
+    "Maintainer reviews and merges the PR."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-consent-001.json",
+    "tasks/place-name-pronunciation-ci-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "https://www.gida-global.org/care"
+  ],
+  "output": "Web contribution flow (TypeScript/ESM) committed via PR with built-in ConsentRecord capture, operating under a partner consent-intake protocol, with privacy/consent reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

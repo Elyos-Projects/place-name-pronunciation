@@ -1,0 +1,35 @@
+{
+  "id": "place-name-pronunciation-linguabridge-001",
+  "title": "Two-way Lingua Libre integration (import open audio + contribute upstream)",
+  "project": "place-name-pronunciation",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["language", "open-culture", "public-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Lingua Libre is a Wikimedia project hosting open pronunciation recordings. It is a candidate source in sources/allowlist.yml. Per-file CC license verification is required before any Lingua Libre audio is imported, since licenses vary per file and CC-BY-SA share-alike propagates to derivatives. A two-way integration would: (1) import existing open-licensed place-name audio from Lingua Libre into the corpus with per-file license capture and attribution; and (2) enable upstream contribution of new recordings from this corpus back to Lingua Libre. Both directions require the CI allow-list and consent gates to pass. This is a backlog item, unscheduled; size and risk ratings reflect the per-file license verification overhead.",
+  "objective": "Implement two-way Lingua Libre integration: an import pipeline for existing open-licensed place-name audio (per-file CC license verification, attribution capture, share-alike labelling) and an upstream contribution workflow for exporting corpus recordings to Lingua Libre.",
+  "acceptanceCriteria": [
+    "Import pipeline verifies each Lingua Libre file's license individually before ingesting; CC-BY-SA files are labelled as share-alike in the corpus entry.",
+    "Every imported file has a complete Provenance record (source IRI, license, attribution string, capture date) and passes CI gates.",
+    "Upstream contribution workflow generates Lingua Libre-compatible metadata for corpus recordings and documents the submission process.",
+    "Share-alike propagation for CC-BY-SA imports is correctly labelled per entry and does not silently contaminate CC-BY-4.0 entries.",
+    "pnpm build && pnpm test && pnpm lint pass.",
+    "License reviewer signs off the per-file verification approach before any audio is imported.",
+    "Maintainer reviews and merges the PR."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-license-001.json",
+    "tasks/place-name-pronunciation-pipeline-001.json",
+    "https://lingualibre.org/wiki/LinguaLibre:Licensing",
+    "https://lingualibre.org/wiki/LinguaLibre:API"
+  ],
+  "output": "Lingua Libre import and contribution pipeline committed via PR with per-file license verification, share-alike labelling, and license reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

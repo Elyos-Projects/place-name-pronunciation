@@ -1,0 +1,36 @@
+{
+  "id": "place-name-pronunciation-explorer-001",
+  "title": "Static explorer: search/listen, show IPA, variants, source + consent status (no accounts/PII)",
+  "project": "place-name-pronunciation",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["language", "accessibility", "open-culture", "geography"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The corpus becomes accessible to its beneficiaries — newcomers, educators, broadcasters, accessibility developers, diaspora communities — through a static explorer that requires no account and collects no visitor PII. The explorer must make visible every assertion's source and consent status, not just the pronunciation itself, so users can judge the trustworthiness of each entry. It links to the raw exports and attribution. Depends on place-name-pronunciation-export-001.",
+  "objective": "Build and deploy a static site explorer (no accounts, no server-side code, no visitor PII collection) that lets users search for a place, listen to each pronunciation variant, and see the IPA, respelling, variant label, and the source and consent status of every assertion. The explorer must link to the raw export downloads and the attribution/license information for each entry.",
+  "acceptanceCriteria": [
+    "Users can search for a place by name and retrieve matching entries.",
+    "For each place, users can listen to each variant recording; see the IPA (narrow/broad), English respelling, and variantType label; and see the source citation and consent status of every assertion.",
+    "The explorer is static (pre-generated at build time); no server-side processing or dynamic backend is required.",
+    "No visitor PII is collected; no analytics, tracking cookies, or account system.",
+    "Raw export download links (JSON-LD, Turtle, audio bundle) and per-entry attribution/license information are displayed.",
+    "The explorer builds without proprietary fonts; open-licensed IPA fonts (OFL) are used for phonetic rendering.",
+    "pnpm build && pnpm test && pnpm lint pass; CI deploys the static build.",
+    "Maintainer reviews and merges the PR."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-export-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio",
+    "https://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web"
+  ],
+  "output": "Static explorer site (TypeScript/ESM, pre-generated) committed via PR with passing CI and deploy pipeline.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

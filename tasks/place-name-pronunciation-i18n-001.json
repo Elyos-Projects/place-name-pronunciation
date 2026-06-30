@@ -1,0 +1,35 @@
+{
+  "id": "place-name-pronunciation-i18n-001",
+  "title": "Multilingual labels/UI for the explorer (Wikidata CC0 labels)",
+  "project": "place-name-pronunciation",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["language", "accessibility", "open-culture", "geography"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The static explorer (explorer-001) initially displays place names and UI in English. Wikidata provides multilingual labels for places under CC0, making it the natural source for localised place-name labels without license complications. This backlog task adds multilingual label data (from Wikidata CC0) to the corpus Place records and wires multilingual UI into the explorer. The task is noted in TASKS.md as 'CC0 labels'. No proprietary label datasets may be used.",
+  "objective": "Fetch multilingual place-name labels from Wikidata (CC0) for corpus Place entries and integrate them into the corpus data and the static explorer UI, enabling users to view place names in their preferred language.",
+  "acceptanceCriteria": [
+    "Multilingual labels are fetched from Wikidata (CC0) via the official API or SPARQL endpoint; no proprietary label dataset is used.",
+    "Labels are stored in the Place record as a localizedLabels map keyed by BCP-47 language tag.",
+    "The static explorer displays place names in the user's preferred language (browser language preference) using the Wikidata labels where available, falling back to the canonical name.",
+    "All label data is attributed to Wikidata (CC0) in the export and explorer.",
+    "pnpm build && pnpm test && pnpm lint pass.",
+    "Maintainer reviews and merges the PR."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-explorer-001.json",
+    "tasks/place-name-pronunciation-recon-001.json",
+    "https://www.wikidata.org/wiki/Wikidata:Licensing",
+    "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+    "https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
+  ],
+  "output": "Updated corpus Place records with Wikidata CC0 multilingual labels and updated static explorer with multilingual UI, committed via PR.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC0-1.0"
+}

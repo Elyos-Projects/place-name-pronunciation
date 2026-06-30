@@ -1,0 +1,32 @@
+{
+  "id": "place-name-pronunciation-metrics-001",
+  "title": "Reuse-metrics tracking (downloads, integrations, citations)",
+  "project": "place-name-pronunciation",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["language", "accessibility", "open-culture", "public-data"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The project's success is measured by downstream reuse (downloads, integrations, citations), not by raw recording count. Tracking these outcomes from M2 onward lets the maintainer report against the success metrics defined in PLAN.md and provides evidence for future steward conversations. Metrics must be collected without visitor PII; no tracking cookies or personal analytics. Depends on place-name-pronunciation-explorer-001.",
+  "objective": "Set up lightweight, privacy-respecting reuse-metrics tracking for the corpus: download counts for export bundles, documented integrations (logged manually), and citations. Produce an initial METRICS.md document defining what is tracked, how it is collected without PII, the baseline at M2 launch, and the review cadence.",
+  "acceptanceCriteria": [
+    "A METRICS.md document is committed defining: what is tracked (download counts, integrations, citations), how each is measured, and what is deliberately not tracked (no visitor PII, no user-level data).",
+    "Download count tracking for the export bundle is configured in a way that does not collect visitor PII (e.g., GitHub release download counts, static hosting aggregate counts).",
+    "A manual integration and citation log template is defined in METRICS.md for tracking documented downstream reuses.",
+    "Baseline metrics at M2 launch are recorded (expected: zero integrations, zero citations).",
+    "Review cadence (quarterly) is documented.",
+    "Maintainer reviews and approves METRICS.md before the task is marked done."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-explorer-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md"
+  ],
+  "output": "METRICS.md committed via PR documenting the privacy-respecting metrics tracking plan, baseline, and review cadence.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

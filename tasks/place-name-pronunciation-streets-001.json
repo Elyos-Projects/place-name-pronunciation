@@ -1,0 +1,35 @@
+{
+  "id": "place-name-pronunciation-streets-001",
+  "title": "Extend scope to street/POI names",
+  "project": "place-name-pronunciation",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["language", "accessibility", "open-culture", "geography", "public-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "The initial scope of the corpus is restricted to place names (administrative areas, settlements, and named natural features). Street and POI names are explicitly deferred to the backlog because they require a separate, deliberate scope-expansion decision. OpenStreetMap (ODbL share-alike) is the primary source for street/POI identifiers; ODbL obligations (keep derived data separable, attribute) must be carefully managed. This task represents that explicit scope expansion and is not scheduled for any milestone. TASKS.md notes 'Explicit scope expansion; OSM ODbL care'.",
+  "objective": "Extend the corpus schema, pipeline, and data to cover street and point-of-interest (POI) names: add Street and POI record types to the schema; document ODbL handling for OSM-derived identifiers; and collect an initial batch of at least 50 street/POI name pronunciations with 100% consent+provenance.",
+  "acceptanceCriteria": [
+    "Schema is extended with Street and POI record types; Ajv-valid; CI passes.",
+    "ODbL handling for OSM-derived street/POI identifiers is documented in the license policy: derived data is kept separable; attribution string is recorded per entry.",
+    "At least 50 street or POI name recordings are collected and committed with 100% consent+provenance.",
+    "All existing CI gates (schema, consent, license, provenance) pass on the extended corpus.",
+    "No OSM-derived data silently contaminates CC-BY-4.0 entries; ODbL entries are labelled.",
+    "Privacy/consent reviewer and license reviewer both sign off before the task is marked done."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-data-001.json",
+    "tasks/place-name-pronunciation-license-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "https://www.openstreetmap.org/copyright",
+    "https://opendatacommons.org/licenses/odbl/"
+  ],
+  "output": "Extended schema and corpus data including at least 50 street/POI name entries with ODbL-compliant provenance, committed via PR with dual reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

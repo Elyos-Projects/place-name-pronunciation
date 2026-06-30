@@ -1,0 +1,34 @@
+{
+  "id": "place-name-pronunciation-id-001",
+  "title": "Commit host-independent persistent ID namespace (w3id.org/PURL)",
+  "project": "place-name-pronunciation",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["language", "open-culture", "public-data", "geography"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The corpus must use persistent, host-independent identifiers so that place and recording IRIs survive a hosting migration (the steward is not yet secured). The ID namespace must be registered with w3id.org or a comparable PURL service, decoupled from any GitHub URL or as-yet-unconfirmed domain. Every Place, Recording, ConsentRecord, and OriginNote entity will carry this stable prefix. This task depends on place-name-pronunciation-schema-001 having defined the record types that need IDs.",
+  "objective": "Register and document a stable, host-independent ID namespace for the corpus (w3id.org/place-name-pronunciation or equivalent PURL), specify the minting pattern for each record type (Place, Recording, Speaker, ConsentRecord, OriginNote), and commit an ID-NAMESPACE.md document describing the namespace, pattern, and resolution intent.",
+  "acceptanceCriteria": [
+    "A stable namespace prefix is registered with w3id.org or an equivalent PURL service and is documented in ID-NAMESPACE.md.",
+    "The ID minting pattern for each record type (Place, Recording, Speaker, ConsentRecord, OriginNote) is defined with examples.",
+    "The namespace is decoupled from GitHub URLs and the not-yet-secured hosting domain.",
+    "ID-NAMESPACE.md records the registration method, resolution intent, and the process for future prefix changes.",
+    "The chosen prefix is reflected as a constant or config value in the schema package so all tooling uses it consistently.",
+    "Maintainer reviews and approves the namespace commitment before the task is marked done."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-schema-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "https://w3id.org/",
+    "https://github.com/perma-id/w3id.org"
+  ],
+  "output": "ID-NAMESPACE.md committed via PR documenting the registered namespace, minting patterns per record type, and resolution intent.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC0-1.0"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "place-name-pronunciation-license-001",
+  "title": "Source allow-list schema + license policy (Forvo/proprietary rejected)",
+  "project": "place-name-pronunciation",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["language", "open-culture", "public-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The corpus may only incorporate audio or data from explicitly approved sources. Before any source is touched a machine-readable allow-list schema and a plain-language license policy must be in place and merged. The schema governs sources/allowlist.yml and defines the fields required for each entry. The policy categorically rejects Forvo and any reuse-restricted pronunciation database, handles CC-BY-SA share-alike propagation, and describes per-file CC verification for Wikimedia/Lingua Libre audio and ODbL handling for OpenStreetMap data. CI must fail on any record referencing an unapproved source. This task has no hard dependency on schema-001 but should be merged before any data ingestion starts.",
+  "objective": "Define the sources/allowlist.yml schema and a corresponding license policy document covering: allow-list entry fields (title, custodian, URL, format, license/PD basis, attribution string, status: approved|rejected|pending); categorical rejection of Forvo and proprietary pronunciation databases; per-file CC verification rules for Wikimedia/Lingua Libre; ODbL share-alike handling for OSM; CC-BY-SA propagation rules; and attribution-string requirements for CC-BY and GeoNames.",
+  "acceptanceCriteria": [
+    "sources/allowlist.yml schema (JSON Schema or YAML Schema) is published and covers: title, custodian, url, format, licenseBasis, attributionString, status (enum: approved|rejected|pending), notes.",
+    "Policy document categorically rejects Forvo and any reuse-restricted pronunciation database with explicit policy language.",
+    "Policy states per-file CC license verification requirement for Wikimedia Commons and Lingua Libre audio.",
+    "ODbL share-alike handling for OpenStreetMap-derived data is documented (keep OSM-derived data separable; attribute).",
+    "CC-BY-SA propagation to derivative audio/transcriptions is documented per entry.",
+    "Attribution-string requirements for CC-BY sources (GeoNames, individual recordings) are specified.",
+    "License reviewer signs off the schema and policy before the task is marked done."
+  ],
+  "resources": [
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "https://www.wikidata.org/",
+    "https://www.geonames.org/",
+    "https://lingualibre.org/",
+    "https://commons.wikimedia.org/",
+    "https://www.openstreetmap.org/copyright",
+    "https://creativecommons.org/licenses/by-sa/4.0/"
+  ],
+  "output": "sources/allowlist.yml schema file plus a LICENSE-POLICY.md document, committed via PR with license reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC0-1.0"
+}

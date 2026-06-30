@@ -1,0 +1,35 @@
+{
+  "id": "place-name-pronunciation-consent-001",
+  "title": "Ratify consent record schema + speaker release + withdrawal terms",
+  "project": "place-name-pronunciation",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["language", "accessibility", "open-culture", "public-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Voice recordings are personal data. Before any audio is ingested, the project needs a machine-readable ConsentRecord schema that captures every dimension required for legal clarity and community trust: the license granted (CC-BY-4.0 or CC0-1.0), explicit public-reuse and voice-recording release, a withdrawal process with honest language about third-party copies, a CARE/community-stewardship flag for Indigenous/minority-language entries, the verification method, and a date. Speakers may be minors or belong to vulnerable groups, requiring an extra-review clause. The schema must be Ajv-valid so the CI consent-completeness gate can enforce it mechanically. No data ingestion (M1+) may begin until this is ratified. Depends on place-name-pronunciation-schema-001.",
+  "objective": "Produce a ratified, Ajv-valid ConsentRecord JSON Schema and a matching human-readable speaker release template, covering: license grant, explicit voice-recording release for public reuse, withdrawal terms (with honest third-party-copy caveat), CARE/community-stewardship flag and terms, date, and verification method; plus a guardian-consent clause for minors/vulnerable speakers.",
+  "acceptanceCriteria": [
+    "ConsentRecord JSON Schema is Ajv-valid (draft-07) and covers: id, scope, licenseGranted (enum: CC-BY-4.0 | CC0-1.0), explicitVoiceRelease (boolean), withdrawalTerms (string), careFlag (boolean), careTerms (string, required when careFlag=true), date, verificationMethod.",
+    "Withdrawal terms text states plainly that future corpus exports will drop withdrawn recordings but that third-party copies already distributed cannot be recalled.",
+    "A human-readable speaker release template (Markdown) derived from the schema is provided and reviewed by the privacy/consent reviewer.",
+    "Guardian-consent clause for minors/vulnerable speakers is defined (extra review required; default is to avoid without a partner protocol).",
+    "Schema integrates with the Recording record's mandatory consentRef slot defined in place-name-pronunciation-schema-001.",
+    "Privacy/consent reviewer signs off the ratified schema and template before the task is marked done."
+  ],
+  "resources": [
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "tasks/place-name-pronunciation-schema-001.json",
+    "https://www.gida-global.org/care",
+    "https://creativecommons.org/licenses/by/4.0/",
+    "https://creativecommons.org/publicdomain/zero/1.0/"
+  ],
+  "output": "Ajv-valid ConsentRecord JSON Schema file plus a human-readable speaker release template (Markdown), committed via PR with privacy/consent reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC0-1.0"
+}

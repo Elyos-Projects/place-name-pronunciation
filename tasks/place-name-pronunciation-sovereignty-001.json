@@ -1,0 +1,34 @@
+{
+  "id": "place-name-pronunciation-sovereignty-001",
+  "title": "Exercise Indigenous/minority CARE workflow with at least 1 community partner (or document non-inclusion)",
+  "project": "place-name-pronunciation",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["language", "open-culture", "geography", "public-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "CARE Principles for Indigenous Data Governance (Collective benefit, Authority to control, Responsibility, Ethics) are binding on this project. Any Indigenous or minority-language place name may only be published under a community-steward record. This task either exercises the full CARE workflow with at least 1 community partner — resulting in a live stewardship record and published entries under their authority — or honestly documents the decision that no Indigenous/minority names will be included pending a willing partner. Neither outcome is a failure; the documentation itself is the deliverable. Depends on place-name-pronunciation-partner-002.",
+  "objective": "Either: (a) engage at least 1 Indigenous or minority-language community partner using the CARE workflow, establish a community-steward record granting them authority to restrict/label/withdraw their names, and publish at least 1 entry under their stewardship; or (b) document the decision that no Indigenous/minority names will be included until a willing partner is secured, recording the outreach attempts and the rationale.",
+  "acceptanceCriteria": [
+    "If a community partner is engaged: a community-steward record is established, the partner retains authority to restrict, label, and withdraw entries; at least 1 entry is published under their stewardship.",
+    "If no partner is secured: a written document (SOVEREIGNTY-STATUS.md) records: outreach attempts made, responses received, decision to exclude Indigenous/minority names pending a partner, and the rationale.",
+    "The outcome (stewardship established or non-inclusion documented) is reflected in the corpus and CI configuration.",
+    "The community retains the right to withdraw entries even post-publication; this is documented in the stewardship record.",
+    "Community steward (if engaged) and maintainer both sign off the outcome document before the task is marked done.",
+    "CARE principles applied: community benefit, authority to control, responsibility to the community, and ethical handling are all explicitly addressed in the documentation."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-partner-002.json",
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "https://www.gida-global.org/care",
+    "https://www.localcontexts.org/"
+  ],
+  "output": "Either a community-steward record plus at least 1 published entry under their stewardship, or SOVEREIGNTY-STATUS.md documenting the non-inclusion decision; committed via PR with appropriate sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

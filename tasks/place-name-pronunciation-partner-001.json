@@ -1,0 +1,34 @@
+{
+  "id": "place-name-pronunciation-partner-001",
+  "title": "Steward and community-partner outreach (Wikimedia/library/revival org/broadcaster)",
+  "project": "place-name-pronunciation",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["language", "accessibility", "open-culture", "geography"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "No partner organisation or last-mile steward has committed to host, cite, or reuse the corpus. Until a named partner commits, verifiedNeed=false on all tasks. This outreach task initiates contact with candidate partner types identified in PLAN.md: a Wikimedia chapter or Lingua Libre community; a public or national library or geographic names authority with an open-data mandate; a language-revitalisation organisation; and a broadcaster pronunciation unit. The goal is not to close a partnership here but to initiate, log, and track outreach so M0 can exit with documented progress.",
+  "objective": "Identify at least 4 candidate partner organisations across the four candidate types (Wikimedia/Lingua Libre, library/names authority, language-revival org, broadcaster pronunciation unit), initiate contact or prepare contact materials for each, and produce a logged outreach document tracking status per candidate.",
+  "acceptanceCriteria": [
+    "At least 4 candidate partner organisations are identified and documented, one from each candidate type (Wikimedia/Lingua Libre, library/geographic names authority, language-revival organisation, broadcaster pronunciation unit).",
+    "A contact approach or draft outreach message is prepared for each candidate.",
+    "An outreach log document (OUTREACH-LOG.md or equivalent) is committed tracking: org name, type, contact method, date initiated, and current status (not-contacted/contacted/responded/declined/in-discussion).",
+    "The log honestly records that verifiedNeed remains false and no partner has committed.",
+    "Maintainer reviews and approves the outreach log before the task is marked done."
+  ],
+  "resources": [
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "https://meta.wikimedia.org/wiki/Wikimedia_chapters",
+    "https://lingualibre.org/",
+    "https://www.ifla.org/",
+    "https://www.geonames.org/about.html"
+  ],
+  "output": "OUTREACH-LOG.md committed via PR documenting at least 4 candidate partners and outreach status, approved by maintainer.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

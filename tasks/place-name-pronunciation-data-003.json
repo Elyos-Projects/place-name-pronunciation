@@ -1,0 +1,36 @@
+{
+  "id": "place-name-pronunciation-data-003",
+  "title": "Scale to at least 500 places across at least 5 locales; origin notes at least 200; maintain 100% consent+provenance",
+  "project": "place-name-pronunciation",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["language", "accessibility", "open-culture", "geography", "public-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "M3 scales the corpus to the shipped bar defined in PLAN.md: at least 500 places across at least 5 locales, origin notes on at least 200 entries, IPA/respelling on at least 90%, 100% consent+provenance maintained, and a fresh independent audit sample still returning at least 95% verified. All Indigenous/minority entries must be under a stewardship record or excluded. Depends on data-002 and origins-001.",
+  "objective": "Expand the corpus to at least 500 places across at least 5 locales with origin notes on at least 200 entries, maintaining 100% consent+provenance, IPA/respelling on at least 90%, all Indigenous/minority entries under a stewardship record, and passing a fresh independent audit at at least 95%.",
+  "acceptanceCriteria": [
+    "At least 500 distinct Place entries are in the corpus; all pass CI gates.",
+    "At least 5 distinct locales (BCP-47 language/region combinations) are represented.",
+    "Origin notes (OriginNote records) are present on at least 200 entries; each passes cultural/linguistic review.",
+    "IPA (narrow and/or broad) plus English respelling are present on at least 90% of all place entries.",
+    "100% of Recordings carry a complete, valid ConsentRecord and a resolvable provenance link; CI gate passes.",
+    "All Indigenous/minority-language entries are under a community-steward record; any without a steward are excluded.",
+    "A fresh independent audit of a stratified sample returns at least 95% verified for consent, license, and citation correctness.",
+    "Privacy/consent reviewer and cultural reviewer both sign off before the task is marked done."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-data-002.json",
+    "tasks/place-name-pronunciation-origins-001.json",
+    "tasks/place-name-pronunciation-sovereignty-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md"
+  ],
+  "output": "Full corpus with at least 500 place entries across at least 5 locales and at least 200 origin notes, committed via PR with dual reviewer sign-off and fresh independent audit at at least 95%.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

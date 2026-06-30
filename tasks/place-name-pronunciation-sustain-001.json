@@ -1,0 +1,33 @@
+{
+  "id": "place-name-pronunciation-sustain-001",
+  "title": "Sustainability, hosting and reviewer-rotation/withdrawal-handling plan",
+  "project": "place-name-pronunciation",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["language", "open-culture", "public-data"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "For the corpus to have a life beyond M3, there must be a documented plan for: who maintains it after delivery; how consent withdrawals are processed; how reviewer seats are rotated as the project scales; and where the audio and explorer are hosted long-term. The host-independent ID namespace (id-001) decouples identifiers from hosting, but the hosting question itself must be answered. Depends on place-name-pronunciation-partner-003.",
+  "objective": "Write and commit a SUSTAINABILITY.md document covering: post-delivery maintenance responsibilities; the hosting plan for audio and the explorer (Wikimedia Commons, steward infrastructure, or object storage); the consent-withdrawal handling process; the reviewer-rotation plan for privacy/consent and cultural/linguistic reviewer seats; and the quarterly outcome-review cadence.",
+  "acceptanceCriteria": [
+    "SUSTAINABILITY.md is committed covering: post-delivery maintenance responsibilities with named roles; the agreed hosting arrangement for audio and the static explorer; the consent-withdrawal handling process (removal from corpus and future exports, honest caveat on third-party copies).",
+    "Reviewer-rotation plan defines: how privacy/consent and cultural/linguistic reviewer seats are filled when current reviewers rotate out; minimum seat-count requirements; escalation if a seat is empty.",
+    "Quarterly outcome-review cadence is documented with reference to the metrics defined in metrics-001.",
+    "Hosting plan names the actual host (or acknowledges TO BE CONFIRMED if still pending) and records the archival strategy (mirrors, formats retained).",
+    "Maintainer reviews and approves SUSTAINABILITY.md before the task is marked done."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-partner-003.json",
+    "tasks/place-name-pronunciation-metrics-001.json",
+    "tasks/place-name-pronunciation-id-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md"
+  ],
+  "output": "SUSTAINABILITY.md committed via PR covering maintenance, hosting, withdrawal handling, reviewer rotation, and quarterly review cadence.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "place-name-pronunciation-recon-001",
+  "title": "Reconcile batch to Wikidata QID and GeoNames ID",
+  "project": "place-name-pronunciation",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["language", "geography", "open-culture", "public-data"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "For the corpus to be machine-readable and linkable, each Place record must carry its Wikidata QID and GeoNames ID where one exists. Reconciliation connects the corpus to the open linked-data ecosystem and enables downstream consumers (TTS, navigation, accessibility tools) to join the data with other open geographic datasets. Wikidata labels are CC0; GeoNames is CC-BY and requires an attribution string recorded per entry. Reconciliation follows data-001 and must be complete before the JSON-LD export can produce valid linked-data output.",
+  "objective": "For each of the at least 50 Place entries in the first consented batch, look up and record the Wikidata QID and GeoNames ID (where one exists), storing them in the wikidataQid and geonamesId fields of the Place record. Record the GeoNames attribution string per the CC-BY requirement.",
+  "acceptanceCriteria": [
+    "Every Place record in the data-001 batch is checked against Wikidata and GeoNames; matched entries have wikidataQid and/or geonamesId populated.",
+    "Unmatched entries are explicitly flagged as unresolved (null or absent field) rather than left empty silently.",
+    "GeoNames attribution string is recorded in the Place record's provenance metadata per the CC-BY requirement.",
+    "Reconciliation is performed via the official APIs or SPARQL endpoints, not scraped HTML; the method is documented.",
+    "Updated Place records pass CI schema validation.",
+    "Maintainer reviews and merges the reconciled dataset PR."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-data-001.json",
+    "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+    "https://www.geonames.org/export/web-services.html",
+    "https://www.geonames.org/about.html"
+  ],
+  "output": "Updated Place records in the corpus data directory with Wikidata QID and GeoNames ID fields populated and GeoNames attribution recorded, committed via PR.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC0-1.0"
+}

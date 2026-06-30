@@ -1,0 +1,36 @@
+{
+  "id": "place-name-pronunciation-tts-001",
+  "title": "Reference a11y/TTS integration demo (open audio + IPA)",
+  "project": "place-name-pronunciation",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["language", "accessibility", "open-culture"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "A concrete accessibility outcome for the corpus is that TTS engines, screen readers, and navigation software can use the open audio and IPA data to correctly pronounce place names. This backlog task builds a reference integration demo showing how to consume the corpus in an open TTS or accessibility context, demonstrating the downstream outcome and providing a template for other integrators. The task is noted in TASKS.md as 'Demonstrates the accessibility outcome'. No synthetic voice generation, no voice cloning, and no proprietary TTS models may be used.",
+  "objective": "Build a reference integration demo that consumes the corpus JSON-LD export and open audio to demonstrate correct place-name pronunciation in an open accessibility or TTS context (e.g., a browser-based screen-reader demo, a Web Speech API demo, or an integration with an open TTS engine).",
+  "acceptanceCriteria": [
+    "The demo consumes the corpus JSON-LD export and open audio files, not any proprietary pronunciation database.",
+    "The demo demonstrates at least one accessibility use case (screen reader, TTS pronunciation, or navigation).",
+    "No synthetic voice generation or voice cloning is used; only the human recordings from the corpus are played.",
+    "No proprietary TTS models or APIs are used; the demo uses open tools only.",
+    "The demo is static or runs in a standard open-source environment without proprietary dependencies.",
+    "pnpm build && pnpm test && pnpm lint pass.",
+    "Maintainer reviews and merges the PR."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-export-001.json",
+    "tasks/place-name-pronunciation-explorer-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis",
+    "https://github.com/coqui-ai/TTS"
+  ],
+  "output": "Reference a11y/TTS integration demo committed via PR, consuming the corpus open audio and IPA and demonstrating at least one accessibility use case.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

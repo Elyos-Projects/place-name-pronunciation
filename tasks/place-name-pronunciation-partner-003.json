@@ -1,0 +1,31 @@
+{
+  "id": "place-name-pronunciation-partner-003",
+  "title": "Secure steward adoption and at least 1 documented downstream reuse",
+  "project": "place-name-pronunciation",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["language", "accessibility", "open-culture", "geography"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The 'delivered, not merged' bar for this project requires a named steward to formally adopt, host, or cite the corpus, and at least one concrete downstream reuse to be documented. Candidate stewards are a Wikimedia chapter, a public library or geographic names authority, a language-revitalisation organisation, or a broadcaster pronunciation unit. A downstream reuse could be a TTS/screen-reader integration, a classroom or broadcast pronunciation reference, a Wikimedia integration, or a navigation/mapping integration. Depends on place-name-pronunciation-partner-002.",
+  "objective": "Secure a formal adoption, hosting, or citation commitment from at least 1 named steward organisation, and document at least 1 concrete downstream reuse of the corpus (a TTS/screen-reader/navigation/classroom/Wikimedia integration or equivalent).",
+  "acceptanceCriteria": [
+    "At least 1 named steward organisation (library, Wikimedia chapter, broadcaster unit, or revival org) formally commits to adopt, host, or cite the corpus; the commitment is documented in writing.",
+    "At least 1 concrete downstream reuse is documented with: the reusing org/individual, the nature of the reuse (TTS/screen-reader/navigation/classroom/Wikimedia/other), the date, and a public link or reference.",
+    "The steward commitment and reuse documentation are committed as STEWARD-ADOPTION.md.",
+    "verifiedNeed is updated to true on corpus tasks once the steward commitment is received (requires a separate PR updating affected task files).",
+    "Maintainer reviews and approves STEWARD-ADOPTION.md before the task is marked done."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-partner-002.json",
+    "planning/projects/place-name-pronunciation/PLAN.md"
+  ],
+  "output": "STEWARD-ADOPTION.md committed via PR documenting the named steward commitment and at least 1 documented downstream reuse.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

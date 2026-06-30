@@ -1,0 +1,38 @@
+{
+  "id": "place-name-pronunciation-export-001",
+  "title": "JSON-LD + Turtle + audio-bundle export tooling",
+  "project": "place-name-pronunciation",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["language", "accessibility", "open-culture", "public-data", "geography"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Downstream consumers (TTS developers, accessibility tools, classrooms, Wikimedia projects) need the corpus in standard open-linked-data formats. The export tooling must produce JSON-LD and Turtle representations of the corpus using the persistent IDs from place-name-pronunciation-id-001, link Place records to their Wikidata QIDs and GeoNames IDs, include attribution strings, and bundle per-entry audio artifacts. Exports must validate and round-trip under the persistent-ID namespace. Depends on place-name-pronunciation-recon-001.",
+  "objective": "Implement TypeScript/ESM export tooling that generates: JSON-LD export of the full corpus with Wikidata/GeoNames links and proper attribution; Turtle/RDF export of the same; per-entry audio bundles (archival + derived formats + checksums); and a CSV/JSON data package. All exports must use the persistent ID namespace and include license and attribution metadata per entry.",
+  "acceptanceCriteria": [
+    "JSON-LD export is produced and validates against the JSON-LD specification; Place IRIs use the persistent namespace from place-name-pronunciation-id-001.",
+    "Turtle/RDF export is produced and parses cleanly with a standard RDF parser.",
+    "Each exported Place links to its Wikidata QID and GeoNames ID via standard linked-data predicates (schema:sameAs or equivalent).",
+    "Per-entry audio bundles include archival + derived audio files and SHA-256 checksums.",
+    "License and attribution metadata is included per entry in all export formats.",
+    "Exports round-trip: importing the JSON-LD back produces records equivalent to the canonical JSON source.",
+    "Export tooling is wired into pnpm build/test/lint and CI passes.",
+    "Maintainer reviews and merges the PR."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-recon-001.json",
+    "tasks/place-name-pronunciation-id-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "https://json-ld.org/",
+    "https://www.w3.org/TR/turtle/",
+    "https://schema.org/"
+  ],
+  "output": "Export tooling package (TypeScript/ESM) committed via PR, generating JSON-LD, Turtle, and audio bundles from the corpus with persistent IDs, attribution, and passing CI.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

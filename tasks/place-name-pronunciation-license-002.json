@@ -1,0 +1,37 @@
+{
+  "id": "place-name-pronunciation-license-002",
+  "title": "Analyze and record first 3 candidate sources (at least 1 approved)",
+  "project": "place-name-pronunciation",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["language", "open-culture", "public-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Before any audio or metadata is ingested the license reviewer must analyse candidate sources and populate sources/allowlist.yml. The first three candidates expected are Wikidata (CC0 - likely auto-approved), GeoNames (CC-BY - allowed with attribution), and Wikimedia Commons/Lingua Libre (per-file CC - needs per-file verification process documented). Each entry must be verified against its actual current license terms; PD originals and PD scans/recordings must be distinguished. At least one source must achieve 'approved' status before M0 can exit. Depends on place-name-pronunciation-license-001 for the allow-list schema.",
+  "objective": "Research and document at least 3 candidate sources in sources/allowlist.yml using the ratified schema: verify each source's current license terms, record the attribution string, determine approved/rejected/pending status, and note any per-file verification requirements or share-alike implications. At least 1 source must reach 'approved' status.",
+  "acceptanceCriteria": [
+    "At least 3 candidate sources are documented in sources/allowlist.yml with all required fields populated (title, custodian, url, format, licenseBasis, attributionString, status, notes).",
+    "Each entry's license is verified against the source's current terms at the time of analysis, not assumed from memory.",
+    "PD originals are distinguished from PD scans/recordings where relevant (e.g., a historical text vs a modern recording of it).",
+    "At least 1 source achieves status: approved, with a complete attribution string.",
+    "Wikidata (CC0), GeoNames (CC-BY), and Wikimedia Commons/Lingua Libre (per-file CC) are among the sources analysed.",
+    "Any source with per-file license variability documents the per-file verification process required before use.",
+    "License reviewer signs off all entries before the task is marked done."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-license-001.json",
+    "sources/allowlist.yml",
+    "https://www.wikidata.org/wiki/Wikidata:Licensing",
+    "https://www.geonames.org/about.html",
+    "https://commons.wikimedia.org/wiki/Commons:Licensing",
+    "https://lingualibre.org/wiki/LinguaLibre:Licensing"
+  ],
+  "output": "Updated sources/allowlist.yml with at least 3 candidate sources analysed and at least 1 approved, committed via PR with license reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC0-1.0"
+}

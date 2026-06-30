@@ -1,0 +1,37 @@
+{
+  "id": "place-name-pronunciation-ci-001",
+  "title": "CI: schema + license-allowlist + consent-completeness + provenance gates",
+  "project": "place-name-pronunciation",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["language", "open-culture", "public-data", "accessibility"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The project's data integrity depends on CI gates that make it mechanically impossible to merge data that is missing consent, lacks provenance, or references an unapproved source. These gates are the enforcement layer for the project's consent-first and license-safety commitments. Four gates are required: (1) schema validation against the core record schemas; (2) license allow-list enforcement (reject any data referencing a source not marked approved in sources/allowlist.yml); (3) consent-completeness check (reject any Recording without a resolvable, valid ConsentRecord); (4) provenance-completeness check (reject any record without a resolvable provenance link). CI should run on every PR. Depends on place-name-pronunciation-schema-001, place-name-pronunciation-consent-001, and place-name-pronunciation-license-001.",
+  "objective": "Implement and wire up four CI gates in the GitHub Actions workflow: (1) Ajv schema validation for all record types; (2) license allow-list enforcement rejecting sources not in sources/allowlist.yml as approved; (3) consent-completeness check failing on any Recording without a valid ConsentRecord reference; (4) provenance-completeness check failing on any record without a resolvable provenance link.",
+  "acceptanceCriteria": [
+    "CI fails on any Recording record without a resolvable consentRef pointing to a valid ConsentRecord.",
+    "CI fails on any record (Recording or OriginNote) that references a source not marked status: approved in sources/allowlist.yml.",
+    "CI fails on any record without a resolvable provenance link.",
+    "CI runs Ajv schema validation against all six core record types on every PR.",
+    "pnpm build && pnpm test && pnpm lint all pass on the CI workflow.",
+    "A test fixture with a deliberately invalid record (missing consent, unapproved source, missing provenance) confirms each gate fires as expected.",
+    "Maintainer reviews and merges the PR."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-schema-001.json",
+    "tasks/place-name-pronunciation-consent-001.json",
+    "tasks/place-name-pronunciation-license-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "https://ajv.js.org/",
+    "https://docs.github.com/en/actions"
+  ],
+  "output": "GitHub Actions workflow file(s) and supporting validation scripts implementing the four CI gates, committed via PR with passing CI.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
