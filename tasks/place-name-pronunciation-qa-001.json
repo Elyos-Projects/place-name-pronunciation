@@ -1,0 +1,35 @@
+{
+  "id": "place-name-pronunciation-qa-001",
+  "title": "Independent audit: license/consent/citation correctness (at least 95%)",
+  "project": "place-name-pronunciation",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["language", "open-culture", "public-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The consent-first, provenance-tracked design of the corpus only holds if an independent reviewer verifies that the actual records match the claimed standards. Self-grading is not acceptable. This task assigns an auditor who is independent of the data contributors to check a stratified sample of the data-001 batch for consent validity, license correctness, and source/citation accuracy. The audit must find at least 95% of checked records correct; any consent, license, or citation defect blocks sign-off until fixed. Depends on place-name-pronunciation-data-001.",
+  "objective": "Conduct an independent stratified audit of the data-001 batch (minimum 30 records or the whole batch if smaller) checking: consent record completeness and validity; license correctness of every source used; citation accuracy for IPA, respelling, and any provenance claims. Produce a written audit report with findings and a pass/fail verdict per check.",
+  "acceptanceCriteria": [
+    "Auditor is independent of the contributors of the sampled records (no self-grading).",
+    "Sample size is at least 30 records or the whole batch if smaller than 30; stratified to cover both locales.",
+    "Each checked record is evaluated for: consent record completeness; license correctness of referenced sources; citation accuracy of provenance claims.",
+    "Overall correctness rate across all three checks is at least 95%.",
+    "Any consent, license, or citation defect found blocks sign-off and requires a fix-and-re-audit cycle.",
+    "Written audit report is committed (AUDIT-M1.md or equivalent) documenting sample selection, methodology, per-check results, and a final pass/fail verdict.",
+    "Privacy/consent reviewer signs off the audit report before the task is marked done."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-data-001.json",
+    "tasks/place-name-pronunciation-consent-001.json",
+    "tasks/place-name-pronunciation-license-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md"
+  ],
+  "output": "AUDIT-M1.md audit report committed via PR, documenting the independent sample audit with at least 95% correctness verified and any defects resolved before sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

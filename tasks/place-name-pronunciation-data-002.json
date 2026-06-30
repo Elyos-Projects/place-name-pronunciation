@@ -1,0 +1,35 @@
+{
+  "id": "place-name-pronunciation-data-002",
+  "title": "Scale to at least 250 places; multi-variant capture on at least 60% of known-variant places",
+  "project": "place-name-pronunciation",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["language", "accessibility", "open-culture", "geography", "public-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "M2 expands the corpus from at least 50 places (M1) to at least 250, with deliberate multi-variant capture on places where multiple variant pronunciations are known to exist. The design principle that variants are records not overrides requires explicit variantType labels on every Recording and at least 2 labelled variants on at least 60% of known-variant places. All M1 data integrity constraints (100% consent+provenance, IPA/respelling on at least 90%, no Indigenous/minority names without stewardship) remain binding. Depends on place-name-pronunciation-export-001.",
+  "objective": "Expand the corpus to at least 250 places across additional locales, ensuring: multi-variant capture (at least 2 labelled variantType Recordings) on at least 60% of places known to have pronunciation variation; 100% consent+provenance maintained; IPA/respelling on at least 90%; all new entries pass CI gates.",
+  "acceptanceCriteria": [
+    "At least 250 distinct Place entries are in the corpus and pass all CI gates.",
+    "Among places where more than one pronunciation variant is known to exist, at least 60% have at least 2 Recordings with distinct variantType labels.",
+    "100% of Recordings have a complete, valid ConsentRecord and a resolvable provenance link.",
+    "IPA (narrow and/or broad) plus English respelling are present on at least 90% of place entries.",
+    "No Indigenous or minority-language place name is included without a community-steward record.",
+    "Privacy/consent reviewer and cultural reviewer both sign off the expanded batch before the task is marked done.",
+    "pnpm build && pnpm test && pnpm lint pass on the full corpus."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-export-001.json",
+    "tasks/place-name-pronunciation-data-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
+  ],
+  "output": "Expanded corpus data directory with at least 250 place-name entries committed via PR, passing all CI gates and dual reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

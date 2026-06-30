@@ -1,0 +1,34 @@
+{
+  "id": "place-name-pronunciation-align-001",
+  "title": "Forced alignment / phoneme timing for learning tools",
+  "project": "place-name-pronunciation",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["language", "accessibility", "open-culture"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Language learners and TTS/accessibility developers benefit from phoneme-level timing in audio: knowing where each phoneme segment starts and ends within a recording enables interactive learning tools (highlight-as-you-listen) and improves TTS training data quality. Forced alignment matches the IPA transcription to the audio waveform and produces a phoneme timing file. This is assistive, non-prescriptive, and the output must be human-confirmed before inclusion. The task is noted in TASKS.md as 'Assistive; human-confirmed'. This is a backlog item, unscheduled.",
+  "objective": "Implement a forced-alignment pipeline that takes a Recording and its IPA transcription and produces a phoneme-timing file (start/end timestamps per phoneme segment), with a human-review step before the timing file is committed to the corpus.",
+  "acceptanceCriteria": [
+    "Forced alignment pipeline takes a Recording (audio file) and its IPA transcription as inputs and produces a phoneme-timing file (JSON with start/end timestamps per phoneme).",
+    "The pipeline uses an open-licensed forced-aligner (no proprietary models).",
+    "Every generated timing file is marked as requiring human review; a reviewer must confirm the alignment before it is committed to the corpus.",
+    "The alignment output format is documented and validates against a JSON Schema.",
+    "pnpm build && pnpm test && pnpm lint pass.",
+    "Maintainer reviews and merges the PR."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-pipeline-001.json",
+    "tasks/place-name-pronunciation-data-001.json",
+    "https://montreal-forced-aligner.readthedocs.io/",
+    "https://www.internationalphoneticassociation.org/content/ipa-chart"
+  ],
+  "output": "Forced-alignment pipeline package (TypeScript/ESM, wrapping an open-licensed aligner) committed via PR with human-review gate and passing CI.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

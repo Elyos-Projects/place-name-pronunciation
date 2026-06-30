@@ -1,0 +1,36 @@
+{
+  "id": "place-name-pronunciation-origins-001",
+  "title": "Sourced origin notes on at least 100 entries (open/PD/CC sources, non-partisan)",
+  "project": "place-name-pronunciation",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["language", "geography", "open-culture", "public-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Short, sourced origin notes add the 'why is it called that?' dimension to the corpus. Each note must be: written non-partisan and descriptively (no adjudicating sovereignty or contested names); sourced from at least 1 open, public-domain, or CC-licensed reference; and reviewed by the cultural/linguistic reviewer before publication. Contested and dual names must be described with attribution to the communities using each name, not by declaring a 'correct' one. No paywalled or unlicensed text may be copied. Depends on place-name-pronunciation-data-002.",
+  "objective": "Write and commit sourced OriginNote records for at least 100 Place entries in the corpus, each citing at least 1 open/PD/CC source, handling contested/dual names non-partisanly, and passing cultural/linguistic review before publication.",
+  "acceptanceCriteria": [
+    "At least 100 OriginNote records are committed, each associated with a Place entry in the corpus.",
+    "Each OriginNote cites at least 1 open-access, public-domain, or CC-licensed source; no paywalled or unlicensed text is copied.",
+    "Contested or dual names are handled descriptively: both/all names and their communities are attributed; no 'correct' name is declared.",
+    "Every OriginNote carries a neutralityNote field explaining how contested framing was avoided (if applicable).",
+    "All OriginNote records carry a reviewStatus and culturalReviewBy field signed by the cultural/linguistic reviewer.",
+    "Every note passes cultural/linguistic review before publication; any note failing review is revised or excluded.",
+    "pnpm build && pnpm test && pnpm lint pass with the OriginNote records present."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-data-002.json",
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "https://www.wikidata.org/",
+    "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+    "https://www.perseus.tufts.edu/"
+  ],
+  "output": "At least 100 OriginNote records committed via PR, each sourced from open/PD/CC references and signed off by the cultural/linguistic reviewer.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

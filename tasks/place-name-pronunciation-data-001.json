@@ -1,0 +1,38 @@
+{
+  "id": "place-name-pronunciation-data-001",
+  "title": "First consented batch: at least 50 places, at least 2 locales, 100% consent+provenance",
+  "project": "place-name-pronunciation",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["language", "accessibility", "open-culture", "geography", "public-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "M1 proves the pipeline on a real, fully-consented batch of place-name recordings. Every entry must pass the CI consent-completeness, license-allowlist, and provenance gates. No Indigenous/minority-language names may be included unless a community-steward record exists. IPA (narrow and/or broad) and an English respelling must be provided on at least 90% of entries. Each Recording must carry a BCP-47 language tag, accent/dialect label, and a variantType label (local|official|anglicised|historical|other). The batch must span at least 2 locales/language communities. Depends on place-name-pronunciation-pipeline-001 and place-name-pronunciation-license-002.",
+  "objective": "Collect, process, and commit at least 50 place-name entries across at least 2 locales, each with at least 1 consented and provenanced recording, IPA+respelling on at least 90% of entries, variantType labels, and 100% CI-passing consent+provenance records. No Indigenous/minority names without a community-steward record.",
+  "acceptanceCriteria": [
+    "At least 50 distinct place entries with at least 1 Recording each are committed and pass all CI gates.",
+    "At least 2 distinct locales (language/region combinations identified by BCP-47 tags) are represented.",
+    "100% of Recordings carry a complete, valid ConsentRecord and a resolvable provenance link; CI gates pass.",
+    "IPA (narrow and/or broad) plus English respelling are present on at least 90% of place entries in the batch.",
+    "Every Recording carries a BCP-47 language tag, an accent/dialect label, and a variantType label.",
+    "No Indigenous or minority-language place name is included unless a community-steward record is in place.",
+    "Privacy/consent reviewer and cultural reviewer both sign off the batch before the task is marked done.",
+    "pnpm build && pnpm test && pnpm lint pass on the committed batch."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-pipeline-001.json",
+    "tasks/place-name-pronunciation-license-002.json",
+    "tasks/place-name-pronunciation-consent-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry",
+    "https://www.internationalphoneticassociation.org/content/ipa-chart"
+  ],
+  "output": "Corpus data directory with at least 50 place-name entries (JSON records + audio artifacts) committed via PR, passing all CI gates, with dual reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

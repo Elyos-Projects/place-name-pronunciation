@@ -1,0 +1,37 @@
+{
+  "id": "place-name-pronunciation-pipeline-001",
+  "title": "Audio pipeline: transcode + EBU R128 normalise + checksums + derived formats",
+  "project": "place-name-pronunciation",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["language", "accessibility", "open-culture", "public-data"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The corpus requires a reproducible audio processing pipeline that takes submitted audio, validates it against the CI consent and license gates, normalises loudness to the EBU R128 standard (approximately -23 LUFS), preserves the archival lossless original, generates delivery-format derivatives, and stores integrity checksums. The pipeline is the technical backbone of M1 data ingestion. It must refuse any input lacking a valid ConsentRecord or referencing an unapproved source. Depends on place-name-pronunciation-ci-001 for the gate checks.",
+  "objective": "Implement an ffmpeg-based audio processing pipeline CLI that: validates input against the CI consent and license gates; preserves archival FLAC/WAV; generates derived OGG Opus and MP3; normalises loudness to EBU R128 (-23 LUFS target); computes and stores SHA-256 checksums per artifact; and records duration and loudness in the Recording metadata.",
+  "acceptanceCriteria": [
+    "Pipeline refuses (exits non-zero) any audio input that lacks a valid ConsentRecord or references an unapproved source.",
+    "Archival lossless copy (FLAC or WAV) is preserved unchanged alongside derived formats.",
+    "OGG Opus and MP3 delivery formats are generated from the archival source.",
+    "Loudness is normalised to EBU R128 target (~-23 LUFS); measured LUFS value is stored in the Recording metadata.",
+    "SHA-256 checksum is computed and stored for each generated artifact (archival + each derived format).",
+    "Duration (seconds) is recorded per Recording via ffprobe.",
+    "Pipeline is wired into pnpm build/test/lint and CI passes.",
+    "Maintainer reviews and merges the PR."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-ci-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md",
+    "https://ffmpeg.org/documentation.html",
+    "https://tech.ebu.ch/docs/r/r128.pdf",
+    "https://www.npmjs.com/package/fluent-ffmpeg"
+  ],
+  "output": "Audio pipeline CLI package (TypeScript/ESM) committed via PR with passing CI, normalising audio to EBU R128 and generating archival + derived formats with checksums.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

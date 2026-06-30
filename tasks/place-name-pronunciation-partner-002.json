@@ -1,0 +1,33 @@
+{
+  "id": "place-name-pronunciation-partner-002",
+  "title": "Engage at least 1 candidate steward for adoption",
+  "project": "place-name-pronunciation",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["language", "accessibility", "open-culture", "geography"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "M0 outreach (partner-001) initiates contact with candidate partners. This M1 task deepens that engagement by presenting the live pipeline and the first consented batch as evidence of a real, trustworthy corpus. At least one candidate steward must move to an active conversation (responded, in-discussion status in the outreach log) before M1 can exit. The steward's eventual adoption is the project's 'delivered' bar. Depends on place-name-pronunciation-partner-001.",
+  "objective": "Using the outreach log from partner-001, present at least 1 candidate steward with the M1 evidence package (pipeline, consented batch, CI gates, audit report) and advance them to an active conversation (responded or in-discussion status).",
+  "acceptanceCriteria": [
+    "At least 1 candidate steward from the partner-001 outreach log has been presented with the M1 evidence package.",
+    "The outreach log is updated to show at least 1 candidate at responded or in-discussion status.",
+    "The evidence package presented includes: a description of the corpus pipeline, the first consented batch, the CI gates, and the M1 audit result.",
+    "The log entry records the org name, contact point, date of presentation, and current engagement status.",
+    "verifiedNeed remains false until a steward formally commits.",
+    "Maintainer reviews and approves the updated outreach log before the task is marked done."
+  ],
+  "resources": [
+    "tasks/place-name-pronunciation-partner-001.json",
+    "tasks/place-name-pronunciation-qa-001.json",
+    "planning/projects/place-name-pronunciation/PLAN.md"
+  ],
+  "output": "Updated OUTREACH-LOG.md committed via PR with at least 1 candidate steward at responded or in-discussion status.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
